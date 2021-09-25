@@ -25,6 +25,11 @@ Guild LiveView (GLiveView) is a local monitoring tool to be used in addition to 
 This is especially useful when moving to a systemd deployment if you haven't done so already, as it offers an intuitive UI to monitor the node status. 
 GLiveView is independent from other files and can run as a standalone utility that can be stopped/started without affecting the status of cardano-node.
 
+## Prometheus
+Prometheus is important to monitoring your node because it queries your node and collects data Prometheus will scrape the metrics of your cardano nodes in a predefined time interval.
+Prometheus stores all the metrics it collects as time series data, i.e. metrics information is stored with the timestamp in the order it was recorded as, alongside optional key-value pairs called labels.
+Prometheus is designed for reliability, to be the system you go to during an outage to allow you to quickly diagnose problems. All of the prometheus server is able to stand alone, not depending on network storage or other remote services. 
+You can rely on prometheus when your infrastructure isn’t working, and you do not need to set up extensive infrastructure to use it.
 
 
 

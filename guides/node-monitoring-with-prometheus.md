@@ -143,39 +143,38 @@ cd bin
 ```
 ```bash
 In the next step you need to add prometheus as data source. Click on:
-
+```
 ![image](https://user-images.githubusercontent.com/73615683/134784052-d363489a-e919-46e9-ad23-5bc3a658d707.png)
 
-```
 ```bash
 In the next screen click on prometheus
+
+```
 ![image](https://user-images.githubusercontent.com/73615683/134784057-885e1f5f-5c67-406a-9980-d07e11bb46e4.png)
 
-```
 ```bash
 In the next step, fill out the form as below. Please be careful: prometheus must be written lowercase! Otherwise your dashboard won't work!
-![image](https://user-images.githubusercontent.com/73615683/134784067-7932c965-2acd-4d6b-b763-46694860c6a1.png)
 
 ```
+![image](https://user-images.githubusercontent.com/73615683/134784067-7932c965-2acd-4d6b-b763-46694860c6a1.png)
+
 ```bash
 In the next step, we need to import the precombiled dashboard of IOHK.
 Copy cardano-application-dashboard-v2.json from the cardano-ops repository to your clipboard.
 In grafana, in the left menu, click on Dashboards -> Manage.
+```
 ![image](https://user-images.githubusercontent.com/73615683/134784082-111a3bcf-20be-49a6-913e-63dba902e2de.png)
 
-```
 ```bash
 In the next page, at the top right corner, click on Import and paste your clipboard to the textarea appearing in the next screen..
+```
 ![image](https://user-images.githubusercontent.com/73615683/134784114-054428db-a754-4f1d-adb6-6a00d525357f.png)
 
-```
 ```bash
 Click on Load.
 Go back to your welcome screen of Grafana. You should now be able to open your metrics by clicking Cardano: Application metrics v2.
-![image](https://user-images.githubusercontent.com/73615683/134784134-85ba2a27-1da7-46f2-ab09-e00abe7fbf39.png)
 ```
-
-
+![image](https://user-images.githubusercontent.com/73615683/134784134-85ba2a27-1da7-46f2-ab09-e00abe7fbf39.png)
 
 
 

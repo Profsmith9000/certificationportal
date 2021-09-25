@@ -3,9 +3,14 @@
 
 ![image](https://user-images.githubusercontent.com/73615683/134778186-acfdbdc7-7efe-42b4-9acc-e19dd9af18d3.png)
 
-{% hint style="hint" %}
-Following this guide means that we assume you have two relay nodes 1 bp and one machine for monitoring your node.
-{% endhint %}
+## Grafana Information
+
+Grafana is a several platform open source analytics and interactive visualization application. 
+It can provide charts, graphs, and alerts when connected to supported data sources. Grafana does not require you to ingest data to a backend store or vendor database.
+Instead, grafana unifies your existing data, wherever it lives. 
+With Grafana, you can also share the dashboards you create with other team members, allowing you to explore the data together. 
+Grafana allows you to build dashboards specifically for you and your team, 
+this is good for security and makes it easy to work and communicate with your team.
 
 ```bash
 
@@ -43,58 +48,6 @@ Following this guide means that we assume you have two relay nodes 1 bp and one 
 ```bash
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

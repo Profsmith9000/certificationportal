@@ -9,7 +9,7 @@ nano mainnet-config.json
 ```bash
 nano mainnet-config.json
 ```
-# In this file search for
+## In this file search for
 "hasPrometheus": [
 "127.0.0.1",
 12798

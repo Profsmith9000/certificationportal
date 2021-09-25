@@ -50,6 +50,9 @@ https://hub.docker.com/r/inputoutput/cardano-node
 
 # cardano-node
 
+![image](https://user-images.githubusercontent.com/90267622/134782733-55c138e1-8933-420b-8db5-bbff93a4d97d.png)
+
+
 This refers to the client being used when running a node.
 
 The general synopsis is as follows
@@ -84,3 +87,12 @@ Usage: cardano-node run [--topology FILEPATH] [--database-path FILEPATH]
 • --Validate-db - Flag to revalidate all on-disk database files
 
 # Configuration .ymal files
+
+![image](https://user-images.githubusercontent.com/90267622/134782794-ca5943a8-5eea-488d-923a-79517fa8b572.png)
+
+The --config flag points to a .ymal file which is responsible to configurig the logging & other important settings for your node. E.g. see the Byron mainnet configuration in the following link. Some of the more important settings will be below the link.
+
+https://github.com/input-output-hk/cardano-node/blob/master/configuration/defaults/byron-mainnet/configuration.yaml
+
+• Protocol: RealPBFT -- The protocol the node will execute
+• RequiresNetworkMagic

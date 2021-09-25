@@ -1,6 +1,6 @@
 # Node Monitoring
 
-A Micro-Credential will be awarded to students that show proficiency in the following node monitoring areas.
+
 
 ![](../.gitbook/assets/bnty1schoolmonitoring.png)
 

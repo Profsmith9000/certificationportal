@@ -1,14 +1,18 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Cryptobounty Certification Program](README.md)
 
 ## Certifications
 
-* [Untitled](certifications/untitled.md)
+* [Cryptobounty Certified Pool Operator](certifications/untitled.md)
 
 ## Micro-Certifications
 
-* [Untitled](micro-certifications/untitled.md)
+* [Node Security](micro-certifications/node-security.md)
+* [Key Management](micro-certifications/key-management.md)
+* [Node Configuration](micro-certifications/node-configuration.md)
+* [Node Management](micro-certifications/node-management.md)
+* [Node Monitoring](micro-certifications/untitled.md)
 
 ## Guides
 

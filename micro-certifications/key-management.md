@@ -16,5 +16,4 @@ You can find a guide covering this here:
 
 You can find a guide covering this here:
 
-![image](https://user-images.githubusercontent.com/73238815/134780365-4072f422-7c2e-44db-8285-d9738a24cb59.png)
 

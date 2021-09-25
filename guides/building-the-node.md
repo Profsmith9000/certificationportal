@@ -112,3 +112,84 @@ https://github.com/input-output-hk/cardano-node/blob/master/configuration/defaul
 
 ![image](https://user-images.githubusercontent.com/90267622/134783031-5a544a51-6720-4c1a-b399-22ad2140310f.png)
 
+Logs are output to the logs/ dir.
+
+# Ptofiling & statistics
+
+![image](https://user-images.githubusercontent.com/90267622/134783089-4e694488-7e07-43b8-807d-81e064499317.png)
+
+Make sure you see scripts/README.md for how to obtain profiling information using the scripts.
+
+# Scripts
+
+![image](https://user-images.githubusercontent.com/90267622/134783124-e649b017-66ea-4759-81fe-ea063cf0c6d1.png)
+
+Be sure you've seen scripts/README.md for information on the various scripts.
+
+# Cardano-cli
+
+![image](https://user-images.githubusercontent.com/90267622/134783185-ed1e2f78-a799-46cd-9b3d-32a1839f5807.png)
+
+A CLI utility to support a variety of key material operations (genesis, migration, pretty-printing) for different system generations. Usage documentation can be found at the following link.
+
+cardano-cli/README.md
+
+The general synopsis is on the following line of code.
+
+```
+Usage: cardano-cli (Era based commands | Byron specific commands | Miscellaneous commands)
+```
+
+Keep in mind that the exact invocation command depends on the enviornment. If you only have cardano-cli bult, without installing it, then you have to prepend cabal run -- `` before`` cardano-cli. From now on we'll just assume that the necessary enviornment-specific adjustment has been made. Now you'll only have to mention cardano-cli.
+
+The subcommands are subdivided in groups and their full name list is visible in the output of cardano-cli --help.
+
+Remember that all the subcommands have help availible. An example is visible below.
+
+```
+cabal run -- cardano-cli -- byron key migrate-delegate-key-from --help
+
+cardano-cli -- byron key migrate-delegate-key-from
+Usage: cardano-cli byron key migrate-delegate-key-from --from FILEPATH
+                                                       --to FILEPATH
+  Migrate a delegate key from an older version.
+
+
+Available options:
+  --byron-legacy-formats   Byron/cardano-sl formats and compatibility
+  --byron-formats          Byron era formats and compatibility
+  --from FILEPATH          Signing key file to migrate.
+  --to FILEPATH            Non-existent file to write the signing key to.
+  -h,--help                Show this help text
+```
+
+# Genesis operations
+
+![image](https://user-images.githubusercontent.com/90267622/134783751-f1769f64-a7b4-49d6-9906-1e72f481dc6e.png)
+
+The Byron genesis operations will create a directory that contains all the following bullet points.
+
+• genesis.json: The genesis JSON file itself.
+
+• avvm-seed.*.seed: Ada Voucher Vending Machine seeds (secret). Affected by --avvm-entry-count and --avvm-entry-balance.
+
+• delegate-keys.*.key: Delegate private keys. Affected by: --n-delegate-addresses.
+
+• delegation-cert.*.json: Delegation certificates. Affected by: --n-delegate-addresses.
+
+• genesis-keys.*.key: Genesis stake private keys. Affected by: --n-delegate-addresses, --total-balance.
+
+• poor-keys.*.key: Non-delegate private keys with genesis UTxO. Affected by: --n-poor-addresses, --total-balance.
+
+More details on the Byron Genesis JSON file can be found in the following link
+
+docs/reference/byron-genesis.md
+
+Byron genesis delegation and related concepts are also described in detail in the link below
+
+https://hydra.iohk.io/job/Cardano/cardano-ledger-specs/byronLedgerSpec/latest/download-by-type/doc-pdf/ledger-spec
+
+# Key operations
+
+![image](https://user-images.githubusercontent.com/90267622/134784005-257dd66b-7e1e-454d-9c32-1a6f8013ce36.png)
+

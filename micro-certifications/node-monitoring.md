@@ -2,8 +2,7 @@
 
 
 
-![image](https://user-images.githubusercontent.com/73615683/134778186-acfdbdc7-7efe-42b4-9acc-e19dd9af18d3.png)
-
+![image](https://user-images.githubusercontent.com/73615683/134784880-c3fe9577-06aa-48a1-bf4f-332f59679287.png)
 ## Grafana Information
 
 Grafana is a several platform open source analytics and interactive visualization application. 

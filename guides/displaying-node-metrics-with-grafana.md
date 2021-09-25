@@ -2,7 +2,9 @@
 ## What you need before beginning Grafana setup
 
 https://docs.docker.com/get-docker/
+
 https://docs.docker.com/compose/ (included in Docker for Desktop for macOS and Windows)
+
 https://git-scm.com/
 
 ## Setting up

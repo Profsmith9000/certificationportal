@@ -1,12 +1,12 @@
 # Node Configuration
 
-Node configuration is a set of default parameters. They will be extended for different deployment environments.
+Node configuration is a set of default parameters. They will be extended for different deployment environments.  
+  
+The Micro-Certification for Node Configuration will be awarded to students who show proficiency in the following areas. 
 
-## Configuring Topology
+## Topology Configuration
 
-* \(link\) 
+## Genesis File Configuration
 
-## Genesis Files
-
-* \(link\)
+## Understanding the Node Configuration File
 

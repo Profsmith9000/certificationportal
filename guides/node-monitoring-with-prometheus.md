@@ -83,6 +83,56 @@ ________________________________________________________________________________
 ## A scrape configuration containing exactly one endpoint to scrape:
 ## Here it's Prometheus itself.
 ## The job name is added as a label `job=` to any timeseries scraped from this config.
+
+Please edit this one before pressing enter.
+```bash
+scrape_configs:
+- job_name: 'cardano_relay1'
+scrape_interval: 5s
+static_configs:
+- targets: ['IP.OF.YOUR.RELAY1:12798']
+- job_name: 'node_relay1' 
+scrape_interval: 5s
+static_configs:
+- targets: ['IP.OF.YOUR.RELAY1:9100']
+```
+## Now for your second relay remember please edit this.
+```bash
+- job_name: 'cardano_relay2'e
+scrape_interval: 5s
+static_configs:
+- targets: ['IP.OF.YOUR.RELAY2:12798']
+- job_name: 'node_relay2' 
+scrape_interval: 5s
+static_configs:
+- targets: ['IP.OF.YOUR.RELAY2:9100']
+```
+## Please edit
+```bash
+- job_name: 'cardano_block'
+scrape_interval: 5s
+static_configs:
+- targets: ['IP.OF.YOUR.BLOCKPRODUCER:12798']
+- job_name: 'node_relay2' 
+scrape_interval: 5s
+static_configs:
+- targets: ['IP.OF.YOUR.BLOCKPRODUCER:9100']
+```
+## Thereafter, still on your monitoring server, you need to open two ports so that you can access the statistics in your browser and from any device you want.
+```bash
+sudo ufw allow proto tcp from any to any port 3000
+sudo ufw allow proto tcp from any to any port 9090
+```
+{% hint style="Info" %}
+Recap-Port 3000 is used by Grafana. After completing the setup you should be able to view the dashboard of Grafana from any client by opening IP.FROM.MONITORING.SERVER:3000 in your browser.
+Port 9090 is used by Prometheus. After completing the setup you should be able to view prometheus from any client by opening IP.FROM.MONITORING.SERVER:9090 in your brows
+{% endhint %}
+```bash
+./prometheus --config.file=prometheus.yml
+```
+In your client browser, open IP.FROM.MONITORING.SERVER:9090. You should see the landing page of prometheus. Click on Status -> Targets to view your nodes.
+The state of all your node jobs should be "up"
+
 ```bash
 
 ```
@@ -98,8 +148,9 @@ ________________________________________________________________________________
 ```bash
 
 ```
+```bash
 
-
+```
 
 
 

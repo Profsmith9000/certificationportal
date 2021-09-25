@@ -12,10 +12,9 @@ Currently, blockchain education at the Highschool level is rare at best, with on
 The University has expressed the desire to form developmental pathways for Highschool students that will allow them to participate in UW’s Proof of Stake and Proof of Work programs.  
   
 High School curricular and CTE programs \(which is what STEM falls under currently\) are required to show accountability for students that have participated in a certain number of semesters in a program. Currently there are no suitable High School level certifications that can be expected to be taught at the Secondary education level that pertain to Blockchain or PoS/PoW infrastructure operations.**  
-  
 
 
-**The University of Wyoming runs a Cardano stakepool and will need people capable of running and expanding their efforts in Cardano and other chains.  
+**The University of Wyoming runs a Cardano stakepool and will need people capable of running and expanding their efforts in validating blocks on Cardano and other chains.  
   
   
 Solutions:  

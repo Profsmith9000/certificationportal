@@ -2,6 +2,9 @@
 
 Keep in mind that this guide isn't solely mine and is heavily based on this guide (https://github.com/input-output-hk/cardano-node/blob/master/doc/stake-pool-operations/KES_period.md)
 
+![image](https://user-images.githubusercontent.com/90267622/134778474-aa9ff649-cfde-4f7e-8d4f-5944249c7f8a.png)
+
+
 To create an operational certificate for a block-producing node, you need a KES key pair.
 
 KES stands for Key Evolving Signature in this situation. This means that after a certain period the key evolves into a new key and discards it's old version. This is a useful situation since if an attacker compromises the key and gains access to the signing key, they would only be able to use that key to sign blocks but blocks from earlier points would be safe so an attack couldn't rewrite history.

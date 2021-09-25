@@ -216,3 +216,42 @@ $ cabal v2-run -- cardano-cli byron key migrate-delegate-key-from
 
 ![image](https://user-images.githubusercontent.com/90267622/134785772-6c00af0e-0340-404f-bf04-261933aed549.png)
 
+One can gather information about signing key's properties through the signing-key-public and signing-key-address subcommands. The latter of the two commands requires network magic.
+
+```
+$ cabal v2-run -- cardano-cli byron key signing-key-public --byron-formats --secret key0.sk
+
+public key hash: a2b1af0df8ca764876a45608fae36cf04400ed9f413de2e37d92ce04
+public key: sc4pa1pAriXO7IzMpByKo4cG90HCFD465Iad284uDYz06dHCqBwMHRukReQ90+TA/vQpj4L1YNaLHI7DS0Z2Vg==
+
+$ cabal v2-run -- cardano-cli signing-key-address --byron-formats --secret key0.pbft --testnet-magic 42
+
+2cWKMJemoBakxhXgZSsMteLP9TUvz7owHyEYbUDwKRLsw2UGDrG93gPqmpv1D9ohWNddx
+VerKey address with root e5a3807d99a1807c3f161a1558bcbc45de8392e049682df01809c488, attributes: AddrAttributes { derivation path: {} }
+```
+
+## Transactions
+
+![image](https://user-images.githubusercontent.com/90267622/134785869-687b7c3e-37ee-4cbf-a4d6-44f281eead75.png)
+
+# Creation
+
+Transactions can be created via the issue-genesis-utxo-expenditure and issue-utxo-expenditure commands.
+
+The easiest way way to create a transactionis by using the scripts/benchmarking/issue-genesis-utxo-expenditure.sh script as follows.
+
+./scripts/benchmarking/issue-genesis-utxo-expenditure.sh transaction_file
+
+NB: This by efault creates transactions based on 
+configuration/defaults/liveview/config-0.yaml
+
+If you don't have a genesis_file you can run scripts/benchmarking/genesis.sh to create an example genesis file for you. The script scripts/benchmarking/issue-genesis-utxo-expenditure.sh has defaults for every requirement of the issue-genesis-utxo-expenditure command.
+
+# Submission
+
+The submit-tx subcommand gives you the option of submitting a pre-signed transaction in its war wire format. (See GenTx for Byron transactions)
+
+The canned scripts/benchmarking/submit-tx.sh script submits the supplied transaction as a testnet launched by scripts/benchmarking/shelly-testnet-liveview.sh script.
+
+# Issuing UTxO expenditure (genesis and regular)
+

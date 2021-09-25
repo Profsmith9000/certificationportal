@@ -1,8 +1,12 @@
 # Starting the Node
 
-Follow these steps to get a relay node running and/or a block producer node 
-# Relay 
-``` 
+## Starting the Node
+
+Follow these steps to get a relay node running and/or a block producer node
+
+## Relay
+
+```text
 cardano-node run \
 --topology mainnet-topology.json \
 --database-path /db \
@@ -10,9 +14,11 @@ cardano-node run \
 --host-addr <PUBLIC IPv4 ADDRESS> \
 --port <PORT> \
 --config mainnet-config.json
-``` 
-# Block Producer 
-``` 
+```
+
+## Block Producer
+
+```text
 cardano-node run \
 --topology mainnet-topology.json \
 --database-path /db \
@@ -23,4 +29,5 @@ cardano-node run \
 --shelley-kes-key kes.skey \
 --shelley-vrf-key vrf.skey \
 --shelley-operational-certificate node.cert
-``` 
+```
+

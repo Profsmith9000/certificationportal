@@ -6,17 +6,17 @@ Students with this certification will have demonstrated proficiency and obtained
 
 
 - Node Security
-{% page-ref page="node-security.md" %}
+{% page-ref page="nodesecurity.md" %}
 
 - Key Management
-{% page-ref page="key-management.md" %}
+{% page-ref page="keymanagement.md" %}
 
 - Node Configuration
-{% page-ref page="node-configuration.md" %}
+{% page-ref page="nodeconfiguration.md" %}
 
 - Node Management
-{% page-ref page="node-management.md" %}
+{% page-ref page="nodemanagement.md" %}
 
 - Node Monitoring
-{% page-ref page="node-monitoring.md" %}
+{% page-ref page="nodemonitoring.md" %}
 

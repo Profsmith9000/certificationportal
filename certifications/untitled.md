@@ -1,6 +1,6 @@
 # Cryptobounty Certified Pool Operator
 
-The Cryptobounty Certified Pool Operator certification is aimed at High-School students that have developed expertise in specific areas of Cardano Stakepool operation. (Needs edited)
+The Cryptobounty Certified Pool Operator certification is aimed at High-School students that have developed expertise in specific areas of Cardano Stakepool operation. 
 
 Students with this certification will have demonstrated proficiency and obtained micro-certifications in the following areas: 
 

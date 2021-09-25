@@ -12,6 +12,13 @@ With Grafana, you can also share the dashboards you create with other team membe
 Grafana allows you to build dashboards specifically for you and your team, 
 this is good for security and makes it easy to work and communicate with your team.
 
+## RTView Information
+
+RTView is an application that allows you to see the state of running Cardano nodes in real-time. Its useful for anyone who runs Cardano nodes and wants to see a good idea of what is going on. 
+Some key features that make RTView desirable over others are: You can view the information about the nodes, peers, blockchain, transactions, resources, etc. you can connect multiple nodes, as many nodes as you want, whether they run locally or on different machines. 
+You receive email notifications for any problems with your nodes. It even comes with a web-based UI, it provides configurable sections, live charts, and interactive tooltips. 
+You can use any browser or run RTView behind a web server like NGINX and view your node states on any third-party device.
+
 ```bash
 
 ```

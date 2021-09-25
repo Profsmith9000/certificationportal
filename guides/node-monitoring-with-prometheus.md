@@ -6,9 +6,6 @@ mainnet-config.json
 ```bash
 nano mainnet-config.json
 ```
-```bash
-nano mainnet-config.json
-```
 ## In this file search for
 "hasPrometheus": [
 "127.0.0.1",
@@ -16,7 +13,7 @@ nano mainnet-config.json
 ],
 ________________________________________________________________________________________________
 # Replace the IP address 127.0.0.1 with 0.0.0.0 to allow listening for external connections.
-I should look like this afterwards... 
+It should look like this afterwards... 
 "hasPrometheus": [
 "0.0.0.0,
 12798
@@ -132,73 +129,58 @@ Port 9090 is used by Prometheus. After completing the setup you should be able t
 ```
 In your client browser, open IP.FROM.MONITORING.SERVER:9090. You should see the landing page of prometheus. Click on Status -> Targets to view your nodes.
 The state of all your node jobs should be "up"
+________________________________________________________________________________________________________
+When prometheus is working, you can continue with the next step: download and install grafana and start it.
 
 ```bash
+cd ~/Downloads
+wget https://dl.grafana.com/oss/release/grafana-7.3.2.linux-amd64.tar.gz
+tar -zxvf grafana-7.3.2.linux-amd64.tar.gz
+rm grafana-7.3.2.linux-amd64.tar.gz
+cd grafana-7.3.2
+cd bin
+./grafana-server
+```
+```bash
+In the next step you need to add prometheus as data source. Click on:
+
+![image](https://user-images.githubusercontent.com/73615683/134784052-d363489a-e919-46e9-ad23-5bc3a658d707.png)
 
 ```
 ```bash
+In the next screen click on prometheus
+![image](https://user-images.githubusercontent.com/73615683/134784057-885e1f5f-5c67-406a-9980-d07e11bb46e4.png)
 
 ```
 ```bash
+In the next step, fill out the form as below. Please be careful: prometheus must be written lowercase! Otherwise your dashboard won't work!
+![image](https://user-images.githubusercontent.com/73615683/134784067-7932c965-2acd-4d6b-b763-46694860c6a1.png)
 
 ```
 ```bash
+In the next step, we need to import the precombiled dashboard of IOHK.
+Copy cardano-application-dashboard-v2.json from the cardano-ops repository to your clipboard.
+In grafana, in the left menu, click on Dashboards -> Manage.
+![image](https://user-images.githubusercontent.com/73615683/134784082-111a3bcf-20be-49a6-913e-63dba902e2de.png)
 
 ```
 ```bash
+In the next page, at the top right corner, click on Import and paste your clipboard to the textarea appearing in the next screen..
+![image](https://user-images.githubusercontent.com/73615683/134784114-054428db-a754-4f1d-adb6-6a00d525357f.png)
 
 ```
 ```bash
-
+Click on Load.
+Go back to your welcome screen of Grafana. You should now be able to open your metrics by clicking Cardano: Application metrics v2.
+![image](https://user-images.githubusercontent.com/73615683/134784134-85ba2a27-1da7-46f2-ab09-e00abe7fbf39.png)
 ```
 
 
 
 
 
+### That is all that I have for you now good luck.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+link:https://www.cardanocafe.org/blog/knowledge-base-cardano/how-to-setup-prometheus-grafana-monitor-cardano-nodes
+This is where I got my information

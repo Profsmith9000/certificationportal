@@ -1,5 +1,8 @@
 # Building the Node
 
+![image](https://user-images.githubusercontent.com/90267622/134788487-87f8b9a9-88cb-41ae-aa8e-98647d53e821.png)
+
+
 This guide takes heavy inspiration and much of it's information from the following guide.
 (https://github.com/input-output-hk/cardano-node)
 
@@ -254,6 +257,7 @@ The submit-tx subcommand gives you the option of submitting a pre-signed transac
 The canned scripts/benchmarking/submit-tx.sh script submits the supplied transaction as a testnet launched by scripts/benchmarking/shelly-testnet-liveview.sh script.
 
 # Issuing UTxO expenditure (genesis and regular)
+
 
 If you plan to make a transaction using UTxO, you can either the following subcommands directly ot you can use one of the canned scripts that make transactions tailored for the testnet cluster. Keep in mind that the first two commands are the directly used subcommands and the next two commands use the canned scripts.
 

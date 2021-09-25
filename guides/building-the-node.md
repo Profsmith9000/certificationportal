@@ -93,11 +93,11 @@ Usage: cardano-node run [--topology FILEPATH] [--database-path FILEPATH]
 
 • --Validate-db - Flag to revalidate all on-disk database files
 
-## Configuration .ymal files
+## Configuration .yaml files
 
 ![image](https://user-images.githubusercontent.com/90267622/134782794-ca5943a8-5eea-488d-923a-79517fa8b572.png)
 
-The --config flag points to a .ymal file which is responsible to configurig the logging & other important settings for your node. E.g. see the Byron mainnet configuration in the following link. Some of the more important settings will be below the link.
+The --config flag points to a .yaml file which is responsible to configuring the logging & other important settings for your node. E.g. see the Byron mainnet configuration in the following link. Some of the more important settings will be below the link.
 
 [https://github.com/input-output-hk/cardano-node/blob/master/configuration/defaults/byron-mainnet/configuration.yaml](https://github.com/input-output-hk/cardano-node/blob/master/configuration/defaults/byron-mainnet/configuration.yaml)
 

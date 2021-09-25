@@ -255,3 +255,14 @@ The canned scripts/benchmarking/submit-tx.sh script submits the supplied transac
 
 # Issuing UTxO expenditure (genesis and regular)
 
+If you plan to make a transaction using UTxO, you can either the following subcommands directly ot you can use one of the canned scripts that make transactions tailored for the testnet cluster. Keep in mind that the first two commands are the directly used subcommands and the next two commands use the canned scripts.
+
+• issue-genesis-utxo-expenditure (genesis UTxO)
+• issue-utxo-expenditure (normal UTxO)
+
+• scripts/benchmarking/issue-genesis-utxo-expenditure.sh.
+• scripts/benchmarking/issue-utxo-expenditure.sh.
+
+Keep in mind that the script requires the target file name so it can write the transaction to it input Txld (If you're using normal UTxO), as well as optionally allows specifying the source txin output index, source and target signing keys and lovelace value to send.
+
+The target adress defaults to the 1-st richman key (configuration/delegate-keys.001.key) of the testnet, and lovelace amount is almost the entirety of its funds.

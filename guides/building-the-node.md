@@ -305,4 +305,106 @@ cardano-cli -- byron governance
                ..
 ```
 
-The mandatory arguments are 
+The mandatory arguments for this to work are --mainnet | --testnet-magic, signing-key, protocol-version-major, protocol-version-minor, protocol-version-alt, application-name, software-version-num, system-tag, installer-hash and filepath.
+
+Any remaining argument is an optional parameter you want to update in your update proposal.
+
+You can also check your proposal's validity using the validate-cbor command. (Follow the link below)
+https://github.com/input-output-hk/cardano-node#validate-cbor-files
+
+Look at the the following link for more details on update proposals.
+
+https://hydra.iohk.io/build/5737190/download/1/ledger-spec.pdf
+
+#Update proposal submission
+
+You can submit your proposal using the submit-upadte-proposal command. An example is listed below
+
+```
+cardano-cli -- byron governance
+            submit-update-proposal
+            --config configuration/defaults/mainnet/configuration.yaml
+            (--mainnet | --testnet-magic NATURAL)
+            --filepath my-update-proposal
+```
+
+See the following link for more details on update proposals
+
+https://hydra.iohk.io/build/5737190/download/1/ledger-spec.pdf
+
+# Update proposal voting
+
+You can create and submit byron update proposal votes woth the create-proposal-vote & submit-proposal-vote commands. Below are two examples of the commands.
+
+Byron vote creation:
+```
+cabal exec cardano-cli -- byron governance create-proposal-vote
+                       (--mainnet | --testnet-magic NATURAL)
+                       --signing-key configuration/defaults/liveview/genesis/delegate-keys.000.key
+                       --proposal-filepath ProtocolUpdateProposalFile
+                       --vote-yes
+                       --output-filepath UpdateProposalVoteFile
+```
+
+Byron vote submission:
+
+```
+cabal exec cardano-cli -- byron governance submit-proposal-vote
+                       (--mainnet | --testnet-magic NATURAL)
+                       --filepath UpdateProposalVoteFile
+```
+
+# Development
+
+GHCID
+
+You can run ghcid with: ghcid -c "cabal repl exe:cardano-node --reorder-goals"
+
+# Haskell Language Server
+
+When using Haskell Language Server with Visual Studio code, you may find HLINT annotations ate ignore<https://github.com/haskell/haskell-language-server/issues/638>.
+
+To work around this, you can run the script ./scripts/reconfigure-hlint.sh which will generate a .hlint.yaml file with HLINT ignore rules derived from the source code.
+
+# Testing
+
+Cardano-node is basically a container which implements several components such as networking, consensus, and storage. All of these components have individual test coverage. The node goes through integration and release testing by Devops/QA while automated CLI tests are ongoing alongside development.
+
+Remember that developers on cardano-node can launch their own testnets (https://github.com/input-output-hk/cardano-node/blob/master/doc/getting-started/launching-a-testnet.md) or run the chairman tests (https://github.com/input-output-hk/cardano-node/blob/master/doc/getting-started/running-chairman-tests.md) locally.
+
+## Debugging
+
+# Pretty printing CBOR encoded files
+
+It may be useful if you print the on chain. representations of blocks, delegation certificates, txs and update proposals. There are two commands that do this (for any cbor encoded file.), though only one is listed directly below this line.
+
+To pretty print as CBOR: cabal exec cardano-cli -- pretty-print-cbor --filepath CBOREncodedFile
+
+# Validate CBOR files
+
+You can validate Byron era blocks, delegation certificates, txs and update proposals with the validate-cbor command.
+
+cabal exec cardano-cli -- validate-cbor --byron-block 21600 --filepath CBOREncodedByronBlockFile
+
+## Native Tokens
+
+Native tokens is a new feature that enables the transacting of multi-assets on Cardano. Native tokens are now supported on mainnet and users can transact with ada, and an unlimited number of user-defined (custom) tokens natively.
+
+Below is a compiled list of resources which can help you get started.
+
+https://forum.cardano.org/c/developers/cardano-tokens/150
+
+https://docs.cardano.org/native-tokens/learn
+
+additionally to that, you can read more about native token and how they compare to things like ada and ERC20 with the link below. Browse native tokens made on the Cardano blockchain itself as well as see their transactions in an interactive dashboard which allows filtering and searching:
+nativetokens.da.iogservices.io.
+
+(https://github.com/input-output-hk/cardano-ledger-specs/blob/master/doc/explanations/features.rst)
+
+## API Documentation
+
+The API documentation is published at the link below.
+
+https://input-output-hk.github.io/cardano-node/
+
+The documentation is built with each push, but is only published from the master branch. If you want to test if the documentation is working, you can build the documentation loccaly with ./scripts/haddocs.sh and ipen haddocs/index.html in the browser.

@@ -6,5 +6,5 @@ A Micro-Credential will be awarded to students that show proficiency in the foll
 
 ## Node Automation and Process Management With Systemd
 
-## Cardano-cli basics
+## Cardano-Cli basics
 

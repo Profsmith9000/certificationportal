@@ -74,16 +74,26 @@ Usage: cardano-node run [--topology FILEPATH] [--database-path FILEPATH]
   
   • --topology - Filepath to a topology file describing which peers the node should connect to.
 •  --database-path - path to the blockchain database.
+
 •  --byron-delegation-certificate - An optional path to the Byron delegation certificate. The certificate allows the delegator (The user of the certificate) to give his/her own block signing rights to somebody else (the delegatee). The delegatee can then sign blocks of behalf of the delegator
+
 • --byron-signing-key - Optional path to the Byron signing key.
+
 • --shelly-signing-key -  Optional path to the Shelly signing key.
+
 • --shelly-kes-key - Optional path to the shelly KES signing key.
+
 • --shelly-vrf-key - Optional path to the Shelly VRF signing key.
+
 • --shelly-operational-certificate - Optional path to the Shelly operation certificate.
 • --socket-path - Path to the socket file.
+
 • --host-addr - Optionally specify your node's IPv4 address.
+
 • --host-ipv6-addr - Optionally specify your node's IPv4 address.
+
 • --port - Specify the filepath to the config .ymal file. This is the file that's responsible for all the other node's required settings. You can find examples in configuration (e.g. https://github.com/input-output-hk/cardano-node/blob/master/configuration/defaults/simpleview/config-0.yaml).
+
 • --Validate-db - Flag to revalidate all on-disk database files
 
 # Configuration .ymal files
@@ -95,4 +105,10 @@ The --config flag points to a .ymal file which is responsible to configurig the 
 https://github.com/input-output-hk/cardano-node/blob/master/configuration/defaults/byron-mainnet/configuration.yaml
 
 • Protocol: RealPBFT -- The protocol the node will execute
-• RequiresNetworkMagic
+
+• RequiresNetworkMagic: RequiresNoMagic -- Used to distinquish between the mainnet (RequiresNoMagic) and the testnets (RequiresMagic)
+
+#Logging
+
+![image](https://user-images.githubusercontent.com/90267622/134783031-5a544a51-6720-4c1a-b399-22ad2140310f.png)
+

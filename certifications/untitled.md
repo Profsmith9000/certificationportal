@@ -1,0 +1,2 @@
+# Cryptobounty Certified Pool Operator
+

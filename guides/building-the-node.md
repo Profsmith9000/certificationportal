@@ -266,3 +266,43 @@ If you plan to make a transaction using UTxO, you can either the following subco
 Keep in mind that the script requires the target file name so it can write the transaction to it input Txld (If you're using normal UTxO), as well as optionally allows specifying the source txin output index, source and target signing keys and lovelace value to send.
 
 The target adress defaults to the 1-st richman key (configuration/delegate-keys.001.key) of the testnet, and lovelace amount is almost the entirety of its funds.
+
+# Local node queries
+
+You can query the tip of your local node with the get-tip command. The instructions are listed below.
+
+1. Open tmux
+2. Run cabal build cardano-nano
+3. Run ./scripts/lite/shelly-testnet.sh example
+4. Run export CARDANO_NODE_SOCKET_PATH=/cardano-node/example/socket/node-1-socket 4. ``cabal exec cardano-cli -- get-tip --testnet-magic 42``
+
+You should then see the output from the stdout in the format below.
+
+```
+Current tip:
+Block hash: 4ab21a10e1b25e39
+Slot: 6
+Block number: 5
+```
+
+# Update proposals
+
+A byron update proposal can be created with the command below
+
+```
+cardano-cli -- byron governance
+               create-update-proposal
+                 (--mainnet | --testnet-magic NATURAL)
+                 --signing-key FILEPATH
+                 --protocol-version-major WORD16
+                 --protocol-version-minor WORD16
+                 --protocol-version-alt WORD8
+                 --application-name STRING
+                 --software-version-num WORD32
+                 --system-tag STRING
+                 --installer-hash HASH
+                 --filepath FILEPATH
+               ..
+```
+
+The mandatory arguments are 

@@ -19,5 +19,6 @@ Keep in mind that the latest supported networks can be found at https://hydra.io
 
 # How to build
 
-Documentation for building the node is availible here.
+Documentation for building the node can be found here.
 
+Make sure that you download the latest version of cardano-node and cardano-cli:

@@ -1,6 +1,5 @@
 # Node Monitoring
 
-# Node Monitoring
 
 
 ![image](https://user-images.githubusercontent.com/73615683/134778186-acfdbdc7-7efe-42b4-9acc-e19dd9af18d3.png)

@@ -7,7 +7,11 @@ Part of maintaing node security is keeping up to date with Linux firewall managm
  - relay rules 
 
 ## Linux OS Hardening 
- - 
+ - (link)
 
 ## SSH Hardening 
- - 
+ - (link)
+ - keys 
+ - port change 
+ - intrusion prevention 
+ - 2 factor 

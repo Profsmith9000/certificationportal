@@ -40,7 +40,7 @@ sudo ufw allow proto tcp from IP.OF.MONITORING.SERVER to any port 12798
 ```bash
 ./node_exporter
 ```
-# You are now preparing your monitoring server
+## You are now preparing your monitoring server
 ```bash
 cd ~
 mkdir Downloads
@@ -54,9 +54,9 @@ cd prometheus-2.22.2.linux-amd64/
 nano prometheus.yml
 
 ```
-# We stick as closely as possible to official cardano documentation. Edit your file to look like this:
+## We stick as closely as possible to official cardano documentation. Edit your file to look like this:
 ________________________________________________________________________________________________
-# my global config
+## my global config
 ```bash
 global:
 scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
@@ -64,25 +64,25 @@ evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every
 external_labels:
 monitor: 'codelab-monitor'
 ```
-# scrape_timeout is set to the global default (10s).
+## scrape_timeout is set to the global default (10s).
 ________________________________________________________________________________________________
-# Alertmanager configuration
+## Alertmanager configuration
 ```bash
 alerting:
 alertmanagers:
 - static_configs:
 - targets:
 ```
-# - alertmanager:9093
+## - alertmanager:9093
 ________________________________________________________________________________________________
-# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+## Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
-# - "first_rules.yml"
-# - "second_rules.yml"
+## - "first_rules.yml"
+## - "second_rules.yml"
 ________________________________________________________________________________________________
-# A scrape configuration containing exactly one endpoint to scrape:
-# Here it's Prometheus itself.
-# The job name is added as a label `job=` to any timeseries scraped from this config.
+## A scrape configuration containing exactly one endpoint to scrape:
+## Here it's Prometheus itself.
+## The job name is added as a label `job=` to any timeseries scraped from this config.
 ```bash
 
 ```

@@ -27,7 +27,9 @@
 * [Node Monitoring with Prometheus](guides/node-monitoring-with-prometheus.md)
 * [Displaying Node Metrics with Grafana](guides/displaying-node-metrics-with-grafana.md)
 * [Using RTView](guides/using-rtview.md)
+* [Cardano-Cli Basics](guides/cardano-cli-basics.md)
 * [3rd Party Monitoring Tools \(gLiveview, etc.\)](guides/3rd-party-monitoring-tools-gliveview-etc..md)
+* [Chrony Configuration](guides/chrony-configuration.md)
 * [Firewall Configurations](guides/firewall-configurations.md)
 * [Configuration, Topology, Genesis](guides/configuration-topology-genesis.md)
 

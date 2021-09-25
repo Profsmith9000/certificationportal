@@ -1,6 +1,8 @@
 # Node Security
 
-Part of maintaing node security is keeping up to date with Linux firewall managment, OS hardening, and SSH hardening.
+Part of maintaing node security is keeping up to date with Linux firewall management, OS hardening, and SSH hardening.   
+  
+The Node Security Micro-Certification will be awarded to students that show proficiency in the following areas. 
 
 ## Linux Firewall Managment
 
@@ -9,11 +11,8 @@ Part of maintaing node security is keeping up to date with Linux firewall managm
 
 ## Linux OS Hardening
 
-* \(link\)
-
 ## SSH Hardening
 
-* \(link\)
 * keys 
 * port change 
 * intrusion prevention 

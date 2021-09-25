@@ -18,7 +18,178 @@ The node no longer incorporates wallet or explorer functionality. The wallet bac
 Keep in mind that the latest supported networks can be found at https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/index.html
 
 # How to build
+![image](https://user-images.githubusercontent.com/90267622/134779709-56b66784-d191-48a5-93a7-6c7041ea5e08.png)
 
-Documentation for building the node can be found here.
+Documentation for building the node can be found at the following link
 
-Make sure that you download the latest version of cardano-node and cardano-cli:
+(https://docs.cardano.org/getting-started/installing-the-cardano-node)
+
+Make sure that you download the latest version of cardano-node and cardano-cli.
+
+https://hydra.iohk.io/build/7760210 (Linux)
+https://hydra.iohk.io/build/7760171 (Win64)
+https://hydra.iohk.io/build/7760341 (Macos)
+
+# Windows Executable
+![image](https://user-images.githubusercontent.com/90267622/134779721-db3d5cb5-ff7f-488e-8fab-0d2e975ded92.png)
+
+This can be downloaded from the following link.
+https://hydra.iohk.io/build/7760171
+
+The download includes cardano-node.exe and a.dll. to run the node with cardano-node run you need to reference a few files and directories as arguments. You can just copy these directly from the cardano-node repo into the executables directory. The command to run the node on mainnet looks like this.
+
+```
+cardano-node.exe run --topology ./mainnet-topology.json --database-path ./state --port 3001 --config ./configuration-mainnet.yaml --socket-path \\.\pipe\cardano-node
+```
+
+# Docker image
+![image](https://user-images.githubusercontent.com/90267622/134780022-86f9429f-f917-425a-b882-a118fbcb5a2f.png)
+
+The docker image with the latest version of cardano-node is availible at the link below
+https://hub.docker.com/r/inputoutput/cardano-node
+
+# cardano-node
+
+![image](https://user-images.githubusercontent.com/90267622/134782733-55c138e1-8933-420b-8db5-bbff93a4d97d.png)
+
+
+This refers to the client being used when running a node.
+
+The general synopsis is as follows
+
+```
+Usage: cardano-node run [--topology FILEPATH] [--database-path FILEPATH]
+                        [--socket-path FILEPATH]
+                        [--byron-delegation-certificate FILEPATH]
+                        [--byron-signing-key FILEPATH]
+                        [--shelley-kes-key FILEPATH]
+                        [--shelley-vrf-key FILEPATH]
+                        [--shelley-operational-certificate FILEPATH]
+                        [--host-addr IPV4-ADDRESS]
+                        [--host-ipv6-addr IPV6-ADDRESS]
+                        [--port PORT]
+                        [--config NODE-CONFIGURATION] [--validate-db]
+  Run the node.
+  ```
+  
+  • --topology - Filepath to a topology file describing which peers the node should connect to.
+•  --database-path - path to the blockchain database.
+
+•  --byron-delegation-certificate - An optional path to the Byron delegation certificate. The certificate allows the delegator (The user of the certificate) to give his/her own block signing rights to somebody else (the delegatee). The delegatee can then sign blocks of behalf of the delegator
+
+• --byron-signing-key - Optional path to the Byron signing key.
+
+• --shelly-signing-key -  Optional path to the Shelly signing key.
+
+• --shelly-kes-key - Optional path to the shelly KES signing key.
+
+• --shelly-vrf-key - Optional path to the Shelly VRF signing key.
+
+• --shelly-operational-certificate - Optional path to the Shelly operation certificate.
+• --socket-path - Path to the socket file.
+
+• --host-addr - Optionally specify your node's IPv4 address.
+
+• --host-ipv6-addr - Optionally specify your node's IPv4 address.
+
+• --port - Specify the filepath to the config .ymal file. This is the file that's responsible for all the other node's required settings. You can find examples in configuration (e.g. https://github.com/input-output-hk/cardano-node/blob/master/configuration/defaults/simpleview/config-0.yaml).
+
+• --Validate-db - Flag to revalidate all on-disk database files
+
+# Configuration .ymal files
+
+![image](https://user-images.githubusercontent.com/90267622/134782794-ca5943a8-5eea-488d-923a-79517fa8b572.png)
+
+The --config flag points to a .ymal file which is responsible to configurig the logging & other important settings for your node. E.g. see the Byron mainnet configuration in the following link. Some of the more important settings will be below the link.
+
+https://github.com/input-output-hk/cardano-node/blob/master/configuration/defaults/byron-mainnet/configuration.yaml
+
+• Protocol: RealPBFT -- The protocol the node will execute
+
+• RequiresNetworkMagic: RequiresNoMagic -- Used to distinquish between the mainnet (RequiresNoMagic) and the testnets (RequiresMagic)
+
+#Logging
+
+![image](https://user-images.githubusercontent.com/90267622/134783031-5a544a51-6720-4c1a-b399-22ad2140310f.png)
+
+Logs are output to the logs/ dir.
+
+# Ptofiling & statistics
+
+![image](https://user-images.githubusercontent.com/90267622/134783089-4e694488-7e07-43b8-807d-81e064499317.png)
+
+Make sure you see scripts/README.md for how to obtain profiling information using the scripts.
+
+# Scripts
+
+![image](https://user-images.githubusercontent.com/90267622/134783124-e649b017-66ea-4759-81fe-ea063cf0c6d1.png)
+
+Be sure you've seen scripts/README.md for information on the various scripts.
+
+# Cardano-cli
+
+![image](https://user-images.githubusercontent.com/90267622/134783185-ed1e2f78-a799-46cd-9b3d-32a1839f5807.png)
+
+A CLI utility to support a variety of key material operations (genesis, migration, pretty-printing) for different system generations. Usage documentation can be found at the following link.
+
+cardano-cli/README.md
+
+The general synopsis is on the following line of code.
+
+```
+Usage: cardano-cli (Era based commands | Byron specific commands | Miscellaneous commands)
+```
+
+Keep in mind that the exact invocation command depends on the enviornment. If you only have cardano-cli bult, without installing it, then you have to prepend cabal run -- `` before`` cardano-cli. From now on we'll just assume that the necessary enviornment-specific adjustment has been made. Now you'll only have to mention cardano-cli.
+
+The subcommands are subdivided in groups and their full name list is visible in the output of cardano-cli --help.
+
+Remember that all the subcommands have help availible. An example is visible below.
+
+```
+cabal run -- cardano-cli -- byron key migrate-delegate-key-from --help
+
+cardano-cli -- byron key migrate-delegate-key-from
+Usage: cardano-cli byron key migrate-delegate-key-from --from FILEPATH
+                                                       --to FILEPATH
+  Migrate a delegate key from an older version.
+
+
+Available options:
+  --byron-legacy-formats   Byron/cardano-sl formats and compatibility
+  --byron-formats          Byron era formats and compatibility
+  --from FILEPATH          Signing key file to migrate.
+  --to FILEPATH            Non-existent file to write the signing key to.
+  -h,--help                Show this help text
+```
+
+# Genesis operations
+
+![image](https://user-images.githubusercontent.com/90267622/134783751-f1769f64-a7b4-49d6-9906-1e72f481dc6e.png)
+
+The Byron genesis operations will create a directory that contains all the following bullet points.
+
+• genesis.json: The genesis JSON file itself.
+
+• avvm-seed.*.seed: Ada Voucher Vending Machine seeds (secret). Affected by --avvm-entry-count and --avvm-entry-balance.
+
+• delegate-keys.*.key: Delegate private keys. Affected by: --n-delegate-addresses.
+
+• delegation-cert.*.json: Delegation certificates. Affected by: --n-delegate-addresses.
+
+• genesis-keys.*.key: Genesis stake private keys. Affected by: --n-delegate-addresses, --total-balance.
+
+• poor-keys.*.key: Non-delegate private keys with genesis UTxO. Affected by: --n-poor-addresses, --total-balance.
+
+More details on the Byron Genesis JSON file can be found in the following link
+
+docs/reference/byron-genesis.md
+
+Byron genesis delegation and related concepts are also described in detail in the link below
+
+https://hydra.iohk.io/job/Cardano/cardano-ledger-specs/byronLedgerSpec/latest/download-by-type/doc-pdf/ledger-spec
+
+# Key operations
+
+![image](https://user-images.githubusercontent.com/90267622/134784005-257dd66b-7e1e-454d-9c32-1a6f8013ce36.png)
+

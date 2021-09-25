@@ -1,9 +1,8 @@
 # Managing Hot Keys
 
-Keep in mind that this guide isn't solely mine and is heavily based on this guide (https://github.com/input-output-hk/cardano-node/blob/master/doc/stake-pool-operations/KES_period.md)
+Keep in mind that this guide isn't solely mine and is heavily based on this guide \([https://github.com/input-output-hk/cardano-node/blob/master/doc/stake-pool-operations/KES\_period.md](https://github.com/input-output-hk/cardano-node/blob/master/doc/stake-pool-operations/KES_period.md)\)
 
 ![image](https://user-images.githubusercontent.com/90267622/134778474-aa9ff649-cfde-4f7e-8d4f-5944249c7f8a.png)
-
 
 To create an operational certificate for a block-producing node, you need a KES key pair.
 
@@ -13,7 +12,7 @@ A KES key will only evolve after a certain number of periods and becomes useless
 
 To find out how long one period is and for how long a key can evolve, you'll need to look into the genesis file. If that file is called mainnet-shelley-genesis.json, you can type
 
-```
+```text
 cat mainnet-shelley-genesis.json | grep KES
 "slotsPerKESPeriod": 129600,
 "maxKESEvolutions": 62,
@@ -25,7 +24,7 @@ Before making an operational certificate for the node, you need to figure out th
 
 To check the current tip of the blockchain you'll use the following command.
 
-```
+```text
 cardano-cli query tip --mainnet
 
 {
@@ -38,14 +37,14 @@ cardano-cli query tip --mainnet
 
 This example sets you in slot 26633911. You know from the genesis file that a single period lasts for 129600 slots. This lets you calculate the current period with this command
 
-```
+```text
 expr 26633911 / 129600
 > 205
 ```
 
 With that you should be able to generate an operational certificate for the stake pool:
 
-```
+```text
 cardano-cli node issue-op-cert \
 --kes-verification-key-file kes.vkey \
 --cold-signing-key-file cold.skey \
@@ -53,3 +52,4 @@ cardano-cli node issue-op-cert \
 --kes-period 205 \
 --out-file node.cert
 ```
+

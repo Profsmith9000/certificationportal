@@ -12,7 +12,7 @@
 * [Key Management](micro-certifications/key-management.md)
 * [Node Configuration](micro-certifications/node-configuration.md)
 * [Node Management](micro-certifications/node-management.md)
-* [Node Monitoring](micro-certifications/untitled.md)
+* [Node Monitoring](micro-certifications/node-monitoring.md)
 
 ## Guides
 
@@ -22,6 +22,12 @@
 * [Up and running the Systemd](guides/up-and-running-the-systemd.md)
 * [Building the Node](guides/building-the-node.md)
 * [Managing Hot Keys](guides/managing-hot-keys.md)
+* [Operating with Cold Keys](guides/operating-with-cold-keys.md)
+* [Key Security](guides/key-security.md)
+* [Node Monitoring with Prometheus](guides/node-monitoring-with-prometheus.md)
+* [Displaying Node Metrics with Grafana](guides/displaying-node-metrics-with-grafana.md)
+* [Using RTView](guides/using-rtview.md)
+* [3rd Party Monitoring Tools \(gLiveview, etc.\)](guides/3rd-party-monitoring-tools-gliveview-etc..md)
 * [Firewall Configurations](guides/firewall-configurations.md)
 * [Configuration, Topology, Genesis](guides/configuration-topology-genesis.md)
 

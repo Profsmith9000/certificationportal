@@ -1,17 +1,21 @@
 # Node Security
 
-Part of maintaing node security is keeping up to date with Linux firewall managment, OS hardening, and SSH hardening. 
+Part of maintaing node security is keeping up to date with Linux firewall managment, OS hardening, and SSH hardening.
 
-## Linux Firewall Managment 
- - block producer rules
- - relay rules 
+## Linux Firewall Managment
 
-## Linux OS Hardening 
- - (link)
+* block producer rules
+* relay rules 
 
-## SSH Hardening 
- - (link)
- - keys 
- - port change 
- - intrusion prevention 
- - 2 factor 
+## Linux OS Hardening
+
+* \(link\)
+
+## SSH Hardening
+
+* \(link\)
+* keys 
+* port change 
+* intrusion prevention 
+* 2 factor 
+

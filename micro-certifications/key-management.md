@@ -4,14 +4,13 @@ The micro-certification for key management is given to students that have achiev
 
 ## Key Security
 
-A page covering some general tips can be found here: {% page-ref page="key-security.md" %}
+A page covering some general tips can be found here:
 
 ## Operating With Cold Keys
 
-You can find a guide covering this here: {% page-ref page="operating-with-cold-keys.md" %}
+You can find a guide covering this here:
 
 ## Managing Hot Keys
 
-You can find a guide covering this here: {% page-ref page="managing-hot-keys.md" %}
-
+You can find a guide covering this here:
 

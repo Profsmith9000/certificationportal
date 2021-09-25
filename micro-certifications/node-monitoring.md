@@ -2,7 +2,7 @@
 
 A Micro-Credential will be awarded to students that show proficiency in the following node monitoring areas.
 
-![image](https://user-images.githubusercontent.com/73615683/134784880-c3fe9577-06aa-48a1-bf4f-332f59679287.png)
+![](../.gitbook/assets/bnty1schoolmonitoring.png)
 
 ## Grafana Information
 

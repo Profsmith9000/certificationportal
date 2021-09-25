@@ -7,5 +7,5 @@
  - (link) 
 
 ## Cardano-cli basics 
+ - submitting links 
  - (link) 
- - submitting texts 

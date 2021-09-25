@@ -37,7 +37,7 @@ This micro-certification NFT method can also easily be ported and used for many 
 
 **Methods:  
   
-We will develop a gibook containing the micro-certification process for becoming a Cryptobounty Certified Stakepool Operator. This gitbook will be developed by High School students. This is going to be a living document, and will be kept up to date so it may best serve our needs over time.**   
+We will develop a gitbook containing the micro-certification process for becoming a Cryptobounty Certified Stakepool Operator. This gitbook will be developed by High School students. This is going to be a living document, and will be kept up to date so it may best serve our needs over time.**   
   
   
   

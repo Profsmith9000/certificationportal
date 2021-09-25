@@ -70,10 +70,38 @@ root               soft    nofile            32768
 <CHANGE TO THE USERNAME WHO RUNS JORMUNGANDR>            hard    nofile            1048576
 ```
 
+If your service starts with systemctl then edit /etc/systemd/system/<YOURSTARTUPSCRIPT>.service to something along the lines of:
+  
+```
+[Unit]
+Description=Shelley Staking Pool
+After=multi-user.target
 
+[Service]
+Type=simple
+ExecStart=<YOUR_NODE_START_SCRIPT>
 
+# 16K Or more
+LimitNOFILE=16384
 
+Restart=on-failure
+RestartSec=5s
+User=<CHANGE TO THE USER ID WHO RUNS JORMUNGANDR>
+Group=users
 
+[Install]
+WantedBy=multi-user.target
+```
+
+And run:
+
+```  
+systemctl daemon-reload && systemctl enable shelley && systemctl start shelley
+```
+
+(Hint) Remove comment above LimitNOFILE
+  
+  
 
 
 

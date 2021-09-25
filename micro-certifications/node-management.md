@@ -1,15 +1,10 @@
 # Node Management
 
-## Chrony Configuration
+A Micro-Credential will be awarded to students that show proficiency in the following facets of Node Management
 
-* \(link\) 
+## Chrony Configuration
 
 ## Node Automation and Process Management With Systemd
 
-* \(link\) 
-
 ## Cardano-cli basics
-
-* submitting links 
-* \(link\) 
 

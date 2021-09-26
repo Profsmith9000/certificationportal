@@ -1,6 +1,8 @@
 # Building the Node
 
-![image](https://user-images.githubusercontent.com/90267622/134788522-bdc5b376-a650-4046-8769-e787c1413cd8.png)
+
+![image](https://user-images.githubusercontent.com/90267622/134788487-87f8b9a9-88cb-41ae-aa8e-98647d53e821.png)
+
 
 This guide takes heavy inspiration and much of it's information from the following guide.
 (https://github.com/input-output-hk/cardano-node)
@@ -257,7 +259,6 @@ The canned scripts/benchmarking/submit-tx.sh script submits the supplied transac
 
 # Issuing UTxO expenditure (genesis and regular)
 
-![image](https://user-images.githubusercontent.com/90267622/134788534-ba9c5d4e-5e76-4036-b747-40309911f685.png)
 
 
 If you plan to make a transaction using UTxO, you can either the following subcommands directly ot you can use one of the canned scripts that make transactions tailored for the testnet cluster. Keep in mind that the first two commands are the directly used subcommands and the next two commands use the canned scripts.

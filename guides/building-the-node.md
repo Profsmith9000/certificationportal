@@ -1,5 +1,6 @@
 # Building the Node
 
+
 ![image](https://user-images.githubusercontent.com/90267622/134788487-87f8b9a9-88cb-41ae-aa8e-98647d53e821.png)
 
 
@@ -259,6 +260,7 @@ The canned scripts/benchmarking/submit-tx.sh script submits the supplied transac
 # Issuing UTxO expenditure (genesis and regular)
 
 
+
 If you plan to make a transaction using UTxO, you can either the following subcommands directly ot you can use one of the canned scripts that make transactions tailored for the testnet cluster. Keep in mind that the first two commands are the directly used subcommands and the next two commands use the canned scripts.
 
 • issue-genesis-utxo-expenditure (genesis UTxO)
@@ -272,6 +274,8 @@ Keep in mind that the script requires the target file name so it can write the t
 The target adress defaults to the 1-st richman key (configuration/delegate-keys.001.key) of the testnet, and lovelace amount is almost the entirety of its funds.
 
 # Local node queries
+
+![image](https://user-images.githubusercontent.com/90267622/134788550-28bcd4e2-4afd-445d-ae7c-70a61d12d4a9.png)
 
 You can query the tip of your local node with the get-tip command. The instructions are listed below.
 
@@ -290,6 +294,9 @@ Block number: 5
 ```
 
 # Update proposals
+
+![image](https://user-images.githubusercontent.com/90267622/134788564-baf5baf0-365f-4194-a83d-962efd46dd21.png)
+
 
 A byron update proposal can be created with the command below
 
@@ -338,9 +345,13 @@ https://hydra.iohk.io/build/5737190/download/1/ledger-spec.pdf
 
 # Update proposal voting
 
+![image](https://user-images.githubusercontent.com/90267622/134788569-0f3ac188-7983-4515-9b3c-ba8afbfb53f0.png)
+
+
 You can create and submit byron update proposal votes woth the create-proposal-vote & submit-proposal-vote commands. Below are two examples of the commands.
 
 Byron vote creation:
+
 ```
 cabal exec cardano-cli -- byron governance create-proposal-vote
                        (--mainnet | --testnet-magic NATURAL)
@@ -360,17 +371,24 @@ cabal exec cardano-cli -- byron governance submit-proposal-vote
 
 # Development
 
+![image](https://user-images.githubusercontent.com/90267622/134788583-f8705bc4-de1b-4b4d-8190-6644c72c27a9.png)
+
+
 GHCID
 
 You can run ghcid with: ghcid -c "cabal repl exe:cardano-node --reorder-goals"
 
 # Haskell Language Server
 
+![image](https://user-images.githubusercontent.com/90267622/134788593-a575ad74-f01b-4780-bfba-94506aab06f1.png)
+
 When using Haskell Language Server with Visual Studio code, you may find HLINT annotations ate ignore<https://github.com/haskell/haskell-language-server/issues/638>.
 
 To work around this, you can run the script ./scripts/reconfigure-hlint.sh which will generate a .hlint.yaml file with HLINT ignore rules derived from the source code.
 
 # Testing
+
+![image](https://user-images.githubusercontent.com/90267622/134788602-9c2bc772-d8c0-48f7-9202-9a20bad27906.png)
 
 Cardano-node is basically a container which implements several components such as networking, consensus, and storage. All of these components have individual test coverage. The node goes through integration and release testing by Devops/QA while automated CLI tests are ongoing alongside development.
 
@@ -379,6 +397,8 @@ Remember that developers on cardano-node can launch their own testnets (https://
 ## Debugging
 
 # Pretty printing CBOR encoded files
+
+![image](https://user-images.githubusercontent.com/90267622/134788619-fb60f4c4-f220-48d8-9306-a30547e6f574.png)
 
 It may be useful if you print the on chain. representations of blocks, delegation certificates, txs and update proposals. There are two commands that do this (for any cbor encoded file.), though only one is listed directly below this line.
 
@@ -391,6 +411,8 @@ You can validate Byron era blocks, delegation certificates, txs and update propo
 cabal exec cardano-cli -- validate-cbor --byron-block 21600 --filepath CBOREncodedByronBlockFile
 
 ## Native Tokens
+
+![image](https://user-images.githubusercontent.com/90267622/134788626-5c4bda95-b3bb-4d1b-9ef6-ca34fdcc05a8.png)
 
 Native tokens is a new feature that enables the transacting of multi-assets on Cardano. Native tokens are now supported on mainnet and users can transact with ada, and an unlimited number of user-defined (custom) tokens natively.
 
@@ -406,6 +428,8 @@ nativetokens.da.iogservices.io.
 (https://github.com/input-output-hk/cardano-ledger-specs/blob/master/doc/explanations/features.rst)
 
 ## API Documentation
+
+![image](https://user-images.githubusercontent.com/90267622/134788631-9b675491-f786-4208-a16c-035950095c0c.png)
 
 The API documentation is published at the link below.
 

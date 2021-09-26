@@ -10,3 +10,7 @@ Students with this certification will have demonstrated proficiency and obtained
 * Node Management
 * Node Monitoring
 
+
+
+![](../.gitbook/assets/microcert-example.jpg)
+

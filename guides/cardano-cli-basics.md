@@ -1,7 +1,8 @@
 # Cardano-Cli Basics
 
+## Cardano-Cli Basics
 
-# Set of Cardano-cli Sub Commands
+## Set of Cardano-cli Sub Commands
 
 **address:** Shelley payment address commands
 
@@ -13,7 +14,7 @@
 
 **stake-pool:** Shelley stake pool commands
 
-**query:** Shelley node query commands. This queries the local node whose Unix domain socket is obtained from the CARDANO_NODE_SOCKET_PATH environment variable. 
+**query:** Shelley node query commands. This queries the local node whose Unix domain socket is obtained from the CARDANO\_NODE\_SOCKET\_PATH environment variable.
 
 **block:** Shelley block commands
 
@@ -25,9 +26,7 @@
 
 **governance:** Shelley governance commands
 
-
-
-# Cardano-cli Address Sub Commands
+## Cardano-cli Address Sub Commands
 
 **key-gen:** creates a single address key pair
 
@@ -39,15 +38,13 @@
 
 **info:** prints details about the address
 
-
-
-# Cardano-clistake address Sub Commands 
+## Cardano-clistake address Sub Commands
 
 **key-gen:** creates a single address key pair
 
 **build:** builds a stake address
 
-**register:** registers a stake address 
+**register:** registers a stake address
 
 **delegate:** delegates from a stake address to a stake pool
 
@@ -59,9 +56,7 @@
 
 **deregistration-certificate:** creates a de-registration certificate
 
-
-
-# Cardano-cli Transaction Sub Commands
+## Cardano-cli Transaction Sub Commands
 
 **build-raw:** builds a low-level transaction
 
@@ -73,15 +68,13 @@
 
 **check:** checks the transaction
 
-**submit:** submits the transaction to the local node whose Unix domain socket is obtained from the CARANO_NODE_SOCKET_PATH environment variable.
+**submit:** submits the transaction to the local node whose Unix domain socket is obtained from the CARANO\_NODE\_SOCKET\_PATH environment variable.
 
 **calculate-min-fee:** calculates the minimum fee for the transaction
 
 **info:** prints information about the transaction
 
-
-
-# Cardano-cli Node Sub Commands
+## Cardano-cli Node Sub Commands
 
 **key-gen:** creates a key pair for a node operator’s offline key and a new certificate issue counter
 
@@ -91,9 +84,7 @@
 
 **issue-op-cert:** issues a node operational certificate
 
-
-
-# Cardano-cli Stakepool Sub Commands 
+## Cardano-cli Stakepool Sub Commands
 
 **register:** registers a stake pool
 
@@ -105,17 +96,15 @@
 
 **de-registration-certificate:** creates a stake pool de-registration certificate
 
-**id:**  builds pool id from the offline key
+**id:** builds pool id from the offline key
 
-
-
-# Cardano-cli Query Sub Commands
+## Cardano-cli Query Sub Commands
 
 **pool-id:** retrieves the node’s pool ID
 
 **protocol-parameters:** retrieves the node’s current pool parameters
 
-**tip:** gets the node’s current tip (slot number, hash, and block number)
+**tip:** gets the node’s current tip \(slot number, hash, and block number\)
 
 **utxo:** retrieves the node’s current UTxO, filtered by address
 
@@ -123,30 +112,25 @@
 
 **status:** retrieves the current status of the node
 
-**ledger-state:**  dumps the current state of the node
+**ledger-state:** dumps the current state of the node
 
 **stake-address-info:** get the current delegations and reward accounts filtered by stake address.
 
 **stake-distribution:** get the node's current aggregated stake distribution
 
-
-
-# Cardano-cli Block Sub Commands 
+## Cardano-cli Block Sub Commands
 
 **info:** retrieves the pool ID that produced a particular block.
 
-
-
-##### Cardano-cli System Sub Commands 
+### Cardano-cli System Sub Commands
 
 **start:** starts the system
 
 **stop:** stops the system
 
+## Cardano-cli Governence
 
-# Cardano-cli Governence 
-
-**create-mir-certificate:** creates an MIR (move instantaneous rewards) certificate
+**create-mir-certificate:** creates an MIR \(move instantaneous rewards\) certificate
 
 **create-update-proposal:** creates an update proposal
 
@@ -154,9 +138,7 @@
 
 **cold-keys:** retrieves the cold keys
 
-
-
-# Cardano-cli Genisis
+## Cardano-cli Genisis
 
 **key-gen-genesis:** creates a Shelley genesis key pair
 
@@ -170,6 +152,7 @@
 
 **initial-addr:** gets the address for an initial UTxO based on the verification key
 
-**initial-txin:** gets the transaction ID for an initial UTxO based on the verification key. 
+**initial-txin:** gets the transaction ID for an initial UTxO based on the verification key.
 
-**create:** creates a Shelley genesis file from a genesis template, as well as genesis keys, delegation keys, and spending keys. 
+**create:** creates a Shelley genesis file from a genesis template, as well as genesis keys, delegation keys, and spending keys.
+

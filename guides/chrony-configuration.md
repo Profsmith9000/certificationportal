@@ -1,10 +1,10 @@
 # Chrony Configuration
 
-To start go to https://chrony.tuxfamily.org/download.html and download the latest version of chrony.
+To start go to [https://chrony.tuxfamily.org/download.html](https://chrony.tuxfamily.org/download.html) and download the latest version of chrony.
 
 Then edit the /etc/chrony/chrony.conf file to look like this:
 
-```
+```text
 # 3 sources per time servers.
 pool ntp.ubuntu.com        iburst maxsources 3
 pool time.nist.gov         iburst maxsources 3
@@ -26,13 +26,13 @@ makestep 0.1 3
 
 Then restart chrony:
 
-```
+```text
 systemctl start chrony
 ```
 
 Next edit /etc/sysctl.conf to look like this:
 
-```
+```text
 fs.file-max = 10000000
 fs.nr_open = 10000000
 
@@ -64,15 +64,15 @@ vm.swappiness = 10
 
 Afterwards, edit /etc/security/limits.conf to this:
 
-```
+```text
 root               soft    nofile            32768
 <CHANGE TO THE USERNAME WHO RUNS JORMUNGANDR>            soft    nofile            32768
 <CHANGE TO THE USERNAME WHO RUNS JORMUNGANDR>            hard    nofile            1048576
 ```
 
-If your service starts with systemctl then edit /etc/systemd/system/<YOURSTARTUPSCRIPT>.service to something along the lines of:
-  
-```
+If your service starts with systemctl then edit /etc/systemd/system/.service to something along the lines of:
+
+```text
 [Unit]
 Description=Shelley Staking Pool
 After=multi-user.target
@@ -95,15 +95,17 @@ WantedBy=multi-user.target
 
 And run:
 
-```  
+```text
 systemctl daemon-reload && systemctl enable shelley && systemctl start shelley
 ```
 
-{% hint style="info" %} Remove comment above LimitNOFILE {% endhint %}
+{% hint style="info" %}
+Remove comment above LimitNOFILE
+{% endhint %}
 
 Start script example:
-  
-```
+
+```text
 #!/bin/bash
 
 CONF_DIR=/<path>/<to>/<the>/<jormungandr>/<configfiles>
@@ -119,20 +121,22 @@ ${JORMUNGANDR} --config ${CONF_DIR}/config.yaml --secret ${CONF_DIR}/secret.yaml
 ```
 
 Jormungandr's config.yaml for reference:
-  
-```
+
+```text
 max_connections: 1024 # Try with 1024 first and then 2048, 4192 or even 16384 (for the beast nodes)
   max_unreachable_nodes_to_connect_per_event: 128
   topics_of_interest:
     blocks: high
     messages: high
 ```
-  
-{% hint style="info" %} Set the log level in config.yaml to "warn" or even "off" {% endhint %}
+
+{% hint style="info" %}
+Set the log level in config.yaml to "warn" or even "off"
+{% endhint %}
 
 Sort the following trusted peers by your current location and comment out the others:
-  
-```
+
+```text
   # IOHK US West - San francisco, California
     - address: "/ip4/52.9.132.248/tcp/3000"
       id: 671a9e7a5c739532668511bea823f0f5c5557c99b813456c
@@ -155,14 +159,13 @@ Sort the following trusted peers by your current location and comment out the ot
     - address: "/ip4/3.124.116.145/tcp/3000"
       id: 99cb10f53185fbef110472d45a36082905ee12df8a049b74
 ```
-  
+
 Finally, allow the bare minimum of firewall allowance with this:
-  
-```
+
+```text
 ufw allow <YOUR_NODE_LISTENING_PORT: default: 3000>/tcp
 ufw allow <WHERE YOUR SSH SRV IS LISTENING default:22>/tcp
 ```
-  
-  
-  
-This guide was heavily inspired by https://gist.github.com/ilap/54027fe9af0513c2701dc556221198b2 
+
+This guide was heavily inspired by [https://gist.github.com/ilap/54027fe9af0513c2701dc556221198b2](https://gist.github.com/ilap/54027fe9af0513c2701dc556221198b2)
+

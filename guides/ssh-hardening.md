@@ -34,7 +34,7 @@ PermitRootLogin no
 Port 12345
 ```
 
-## Allow Users and Groups**
+## Allow Users and Groups\*\*
 
 ```text
 AllowUsers user1 user2
@@ -108,6 +108,4 @@ mv /etc/ssh/moduli.safe /etc/ssh/moduli
 ```text
 Protocol 2
 ```
-
-
 

@@ -1,7 +1,5 @@
 # Node Monitoring
 
-
-
 ![](../.gitbook/assets/bnty1schoolmonitoring.png)
 
 ## Grafana Information

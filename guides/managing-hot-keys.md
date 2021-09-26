@@ -1,6 +1,6 @@
 # Managing Hot Keys
 
-Keep in mind that this guide isn't solely mine and is heavily based on this guide \([https://github.com/input-output-hk/cardano-node/blob/master/doc/stake-pool-operations/KES\_period.md](https://github.com/input-output-hk/cardano-node/blob/master/doc/stake-pool-operations/KES_period.md)\)
+
 
 ![image](https://user-images.githubusercontent.com/90267622/134778474-aa9ff649-cfde-4f7e-8d4f-5944249c7f8a.png)
 
@@ -52,4 +52,6 @@ cardano-cli node issue-op-cert \
 --kes-period 205 \
 --out-file node.cert
 ```
+
+Above guide based on \([https://github.com/input-output-hk/cardano-node/blob/master/doc/stake-pool-operations/KES\_period.md](https://github.com/input-output-hk/cardano-node/blob/master/doc/stake-pool-operations/KES_period.md)\)
 

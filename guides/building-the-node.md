@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/90267622/134788487-87f8b9a9-88cb-41ae-aa8e-98647d53e821.png)
 
-This guide takes heavy inspiration and much of it's information from the following guide. \([https://github.com/input-output-hk/cardano-node](https://github.com/input-output-hk/cardano-node)\)
+
 
 Integration of the ledger, consensus, networking and node shell repositories.
 
@@ -421,4 +421,8 @@ The API documentation is published at the link below.
 [https://input-output-hk.github.io/cardano-node/](https://input-output-hk.github.io/cardano-node/)
 
 The documentation is built with each push, but is only published from the master branch. If you want to test if the documentation is working, you can build the documentation loccaly with ./scripts/haddocs.sh and ipen haddocs/index.html in the browser.
+
+
+
+This guide takes heavy inspiration and much of it's information from the following guide. \([https://github.com/input-output-hk/cardano-node](https://github.com/input-output-hk/cardano-node)}
 
